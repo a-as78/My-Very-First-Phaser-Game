@@ -1,30 +1,23 @@
-import Phaser from 'phaser';
-// import MainScene from './scenes/mainScene';
-// import MainMenuScene from './scenes/mainMenuScene';
-// import GameOverScene from './scenes/gameOverScene';
-// import LeaderboardScene from './scenes/leaderboardScene';
-// import InstructionsScene from './scenes/instructionsScene';
-const config = {
-type: Phaser.AUTO,
-width: window.innerWidth,
-height: window.innerHeight - 5,
-parent: 'divId',
-dom: {
-createContainer: true,
-},
-physics: {
-default: 'arcade',
-arcade: {
-gravity: { y: 300 },
-debug: false,
-},
-},
-scene: [
-// MainMenuScene,
-// MainScene,
-// InstructionsScene,
-// GameOverScene,
-// LeaderboardScene,
-],
+const gameState = {
+	score: 0
 };
-const game = new Phaser.Game(config);
+
+const config = {
+    type: Phaser.AUTO,
+    width: window.innerWidth - 25,
+    height: window.innerHeight - 25,
+    backgroundColor: 'f4c2c2',
+    physics: {
+      default: 'arcade',
+      arcade: {
+        gravity: { y: 300 },
+        enableBody: true,
+      }
+    },
+    scene: [
+        StartScene, 
+        GameScene
+    ]
+  };
+  
+  const game = new Phaser.Game(config);
