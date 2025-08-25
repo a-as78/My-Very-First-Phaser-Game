@@ -6,5 +6,3 @@ It is a very simple game using the basics of Phaser.
 npm install
 npm start
 
-# Try It Here
-https://phaser-candy-girl.herokuapp.com/
